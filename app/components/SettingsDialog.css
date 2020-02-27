@@ -1,0 +1,7 @@
+.container > div:not(:last-child) {
+  padding-bottom: 1.5rem;
+}
+
+.dialogContent {
+  min-width: 350px;
+}

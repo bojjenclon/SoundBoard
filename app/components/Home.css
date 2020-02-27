@@ -1,0 +1,11 @@
+.root {
+  flex-grow: 1;
+}
+
+.header {
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  flex-grow: 1;
+}

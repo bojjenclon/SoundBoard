@@ -1,0 +1,15 @@
+.truncatedField {
+  max-width: 350px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.deleteButton {
+  background-color: #d32f2f !important;
+  color: #fff !important;
+}
+
+.deleteButton:hover {
+  background-color: #f44336 !important;
+}
