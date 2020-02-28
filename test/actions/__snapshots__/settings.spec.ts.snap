@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`actions should create max cache size setter action with appropriate value 1`] = `
+Object {
+  "type": "SET_MAX_CACHE_SIZE",
+  "value": 15
+}
+`;
+
+exports[`actions should create grid columns setter action with appropriate value 1`] = `
+Object {
+  "type": "SET_GRID_COLUMNS",
+  "value": 3
+}
+`;
+
+exports[`actions should create allow concurrent audio setter action with appropriate value 1`] = `
+Object {
+  "type": "SET_ALLOW_CONCURRENT_AUDIO",
+  "value": true
+}
+`;
