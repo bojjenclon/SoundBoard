@@ -240,4 +240,5 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(SettingsActions, dispatch);
 }
 
+// $FlowFixMe
 export default connect(mapStateToProps, mapDispatchToProps)(SettingsDialog);

@@ -14,6 +14,8 @@ import {
 } from '@material-ui/core';
 import AttachFileIcon from '@material-ui/icons/AttachFile';
 
+const { dialog } = require('electron').remote;
+
 type Props = {
   open: boolean,
 
@@ -35,6 +37,8 @@ type State = {
 
 class AddSoundDialog extends Component<Props, State> {
   props: Props;
+
+  fileInput: { current: null | HTMLInputElement };
 
   constructor(props: Props) {
     super(props);
@@ -134,6 +138,21 @@ class AddSoundDialog extends Component<Props, State> {
       shortcutError
     } = this.state;
 
+    const openFile = () => {
+      const selectedFiles = dialog.showOpenDialogSync({
+        properties: ['openFile'],
+        filters: [{ name: 'Audio', extensions: ['mp3', 'wav'] }]
+      });
+
+      if (!!selectedFiles && !!selectedFiles.length) {
+        const audioFile = selectedFiles[0];
+        this.setState({
+          soundPath: audioFile,
+          pathError: false
+        });
+      }
+    };
+
     return (
       <Dialog
         disableBackdropClick
@@ -179,8 +198,7 @@ class AddSoundDialog extends Component<Props, State> {
                   onClick={evt => {
                     evt.stopPropagation();
 
-                    const fileInput = this.fileInput.current;
-                    fileInput.click();
+                    openFile();
                   }}
                   InputProps={{
                     inputProps: {
@@ -193,30 +211,10 @@ class AddSoundDialog extends Component<Props, State> {
                           onClick={evt => {
                             evt.stopPropagation();
 
-                            const fileInput = this.fileInput.current;
-                            fileInput.click();
+                            openFile();
                           }}
                         >
                           <AttachFileIcon />
-                          <input
-                            ref={this.fileInput}
-                            type="file"
-                            accept="audio/*"
-                            style={{ display: 'none' }}
-                            onChange={() => {
-                              const fileInput = this.fileInput.current;
-                              const { files } = fileInput;
-
-                              if (files && !!files.length) {
-                                const audioFile = files[0];
-
-                                this.setState({
-                                  soundPath: audioFile.path,
-                                  pathError: false
-                                });
-                              }
-                            }}
-                          />
                         </IconButton>
                       </InputAdornment>
                     )
