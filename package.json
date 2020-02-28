@@ -56,8 +56,8 @@
     ]
   },
   "build": {
-    "productName": "ElectronReact",
-    "appId": "org.develar.ElectronReact",
+    "productName": "SoundBoard",
+    "appId": "org.bojjenclon.SoundBoard",
     "files": [
       "dist/",
       "node_modules/",
@@ -100,19 +100,19 @@
     },
     "publish": {
       "provider": "github",
-      "owner": "electron-react-boilerplate",
-      "repo": "electron-react-boilerplate",
+      "owner": "bojjenclon",
+      "repo": "SoundBoard",
       "private": false
     }
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/electron-react-boilerplate/electron-react-boilerplate.git"
+    "url": "git+https://github.com/bojjenclon/SoundBoard.git"
   },
   "author": {
-    "name": "Electron React Boilerplate Maintainers",
-    "email": "electronreactboilerplate@gmail.com",
-    "url": "https://electron-react-boilerplate.js.org"
+    "name": "Cornell Daly",
+    "email": "contact@qunatum-io.com",
+    "url": "https://quantum-io.com"
   },
   "contributors": [
     {
@@ -124,24 +124,26 @@
       "name": "Amila Welihinda",
       "email": "amilajack@gmail.com",
       "url": "https://github.com/amilajack"
+    },
+    {
+      "name": "Cornell Daly",
+      "email": "contact@qunatum-io.com",
+      "url": "https://github.com/bojjenclon"
     }
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/electron-react-boilerplate/electron-react-boilerplate/issues"
+    "url": "https://github.com/bojjenclon/SoundBoard/issues"
   },
   "keywords": [
     "electron",
-    "boilerplate",
     "react",
     "redux",
     "flow",
     "sass",
-    "webpack",
-    "hot",
-    "reload"
+    "audio"
   ],
-  "homepage": "https://github.com/electron-react-boilerplate/electron-react-boilerplate#readme",
+  "homepage": "https://github.com/bojjenclon/SoundBoard#readme",
   "jest": {
     "testURL": "http://localhost/",
     "moduleNameMapper": {
@@ -288,7 +290,7 @@
     "yarn": ">=0.21.3"
   },
   "collective": {
-    "url": "https://opencollective.com/electron-react-boilerplate-594"
+    "url": ""
   },
   "browserslist": "electron 1.6",
   "husky": {
